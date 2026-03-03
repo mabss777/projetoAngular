@@ -1,2 +1,2 @@
 # projetoAngular
-Atividae individual sobre o Angular
+Atividade individual sobre o Angular

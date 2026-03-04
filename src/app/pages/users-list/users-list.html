@@ -1,5 +1,15 @@
-<app-container>
-<header>
-  <p>Hello</p>
-</header>
-</app-container>
+<h1 class="titulo">Lista de Confirmados</h1>
+
+<ul class="lista">
+  @for (usuario of usuarios; track usuario.id) {
+    <li class="card-usuario">
+      <span>{{ usuario.name }}</span>
+
+      <button
+        [routerLink]="['/detalhes', usuario.id]"
+        class="btn">
+        Detalhes
+      </button>
+    </li>
+  }
+</ul>

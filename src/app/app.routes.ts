@@ -8,9 +8,14 @@ export const routes: Routes = [
     path: "listas",
     component: UsersList
   },
+  
+  {
+    path: "detalhes/:id",
+    component: UserDetails
+  },
 
   {
-    path: "detalhes",
-    component: UserDetails
+    path: "",
+    component: UsersList
   }
 ];

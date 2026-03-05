@@ -11,5 +11,8 @@
 ## Onde você utilizou o Observable e por quê?
 >Utilizei no arquivo service - user.ts -, nas funções `getUsers()` e `buscarPorId` que fazem requisições para a API de usuários. Ele foi utilizado porque os dados não chegam imediatamente, por causa do uso do HttpClient. Por isso, os métodos retornam um Observable, permitindo que o componente se inscreva com subscribe() para receber os dados quando a resposta da API estiver disponível.
 
-![](/assets/pagina_users.png)
-![](/assets/users_detalhes_3.png)
+## Imagens do projeto
+
+![Lista de usuários](src/assets/pagina_users.png)
+
+![Detalhes do usuário](src/assets/users_detalhes_3.png)

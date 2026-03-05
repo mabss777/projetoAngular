@@ -14,4 +14,9 @@ export class User {
   getUsers(): Observable<userModel[]> {
     return this.http.get<userModel[]>(this.API);
   }
+
+  buscarPorId(id:number): Observable<userModel>{
+    const url = `${this.API}/${id}`
+    return this.http.get<userModel>(url)
+  }
 }

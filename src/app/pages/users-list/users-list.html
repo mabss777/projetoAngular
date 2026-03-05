@@ -1,9 +1,16 @@
-<h1 class="titulo">Lista de Confirmados</h1>
+<h1>Lista de Confirmados</h1>
 
-<ul class="lista">
+<p *ngIf="loading">Carregando...</p>
+
+<p *ngIf="error">{{ error }}</p>
+
+<ul class="lista" *ngIf="!loading && !error">
+
   @for (usuario of usuarios; track usuario.id) {
     <li class="card-usuario">
-      <span>{{ usuario.name }}</span>
+      <span>{{ usuario.name }}</span><br>
+      <span>{{ usuario.email }}</span><br><br>
+      <span>{{ usuario.address?.city }}</span><br><br>
 
       <button
         [routerLink]="['/detalhes', usuario.id]"
@@ -12,4 +19,5 @@
       </button>
     </li>
   }
+
 </ul>

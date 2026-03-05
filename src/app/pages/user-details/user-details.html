@@ -1,2 +1,27 @@
-<button routerLink="/listas">Voltar</button>
+<button (click)="voltar()">Voltar</button>
 
+@if (loading) {
+<div>Carregando...</div>
+} @else if (error) {
+<div>{{ error }}</div>
+} @else if (usuario) {
+<section>
+  <h1>Nome:</h1>
+  <h2>{{ usuario.name }}</h2>
+
+  <h1>Telefone:</h1>
+  <h2>{{ usuario.phone }}</h2>
+
+  <h1>E-Mail:</h1>
+  <h2>{{ usuario.email }}</h2>
+
+  <h1>Website:</h1>
+  <h2>{{ usuario.website }}</h2>
+
+  <h1>Endereço:</h1>
+  <h2>Cidade: {{ usuario.address?.city }}</h2>
+
+  <h1>Empresa:</h1>
+  <h2>{{ usuario.company?.name }}</h2>
+</section>
+}

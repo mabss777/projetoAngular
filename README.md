@@ -1,59 +1,15 @@
-# AtividadeRotas
+# Projeto Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+## Perguntas
 
-## Development server
+## O que é uma rota dinâmica?
+> Uma rota dinâmica é um caminho de navegação que contém diferentes contéudos de acordo com os parâmetros selecionados.
 
-To start a local development server, run:
+## O que é o paramMap?
+>Um paramMap é uma interface utilizada para acessar os parâmetros das rotas de forma organizada. Ele permite pegar valores enviados pela URL, como um id, por exemplo. No projeto, ele foi usado para obter o id da rota e, a partir dele, buscar as informações do usuário na API.
 
-```bash
-ng serve
-```
+## Onde você utilizou o Observable e por quê?
+>Utilizei no arquivo service - user.ts -, nas funções `getUsers()` e `buscarPorId` que fazem requisições para a API de usuários. Ele foi utilizado porque os dados não chegam imediatamente, por causa do uso do HttpClient. Por isso, os métodos retornam um Observable, permitindo que o componente se inscreva com subscribe() para receber os dados quando a resposta da API estiver disponível.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![](/assets/pagina_users.png)
+![](/assets/users_detalhes_3.png)
